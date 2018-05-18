@@ -7,6 +7,7 @@ people.
 # License
 
 Copyright (c) 2018 The Oxford Star Trek Society
+
 Copyright (c) 2018 Kaashif Hymabaccus
 
 These works are licensed under the Creative Commons
