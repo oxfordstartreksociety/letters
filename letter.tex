@@ -1,0 +1,91 @@
+\documentclass[
+  fontsize=11pt,
+  paper=a4,
+  parskip=half,
+  enlargefirstpage=on,    
+% More space on first page
+  fromalign=right,        
+% PLacement of name in letter head
+  fromphone=off,           
+% Turn off phone number of sender
+  addrfield=on,           
+% Adress field for envelope with window
+  backaddress=off,         
+% Sender address in this window
+  subject=beforeopening,  
+% Placement of subject
+  locfield=narrow,        
+% Additional field for sender
+  foldmarks=on,           
+% Print foldmarks
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{graphicx} 
+
+\setkomafont{fromname}{\sffamily \LARGE}
+\setkomafont{fromaddress}{\sffamily}%% statt \small
+\setkomafont{pagenumber}{\sffamily}
+\setkomafont{subject}{\bfseries}
+\setkomafont{backaddress}{\mdseries}
+
+\LoadLetterOption{DIN}
+\setkomavar{fromname}{Matthew Le Croissette} %will need to change this
+\setkomavar{fromaddress}{
+  Oxford Star Trek Society \\
+  Lady Margaret Hall \\
+  Oxford \\
+  OX2 6QA \\
+  United Kingdom
+}
+ %also this
+\setkomavar{fromphone}{+49 0000 0\,00\,00\,00}
+\setkomavar{fromemail}{from.name@mail.com}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{date}{\today}
+\setkomavar{signature}{
+  The Oxford Star Trek Society \\
+  \includegraphics[width=0.3\textwidth]{treksoclogo.png}
+}%need to upload a picture of the logo and put file name here
+
+\setkomavar{enclseparator}{: }
+
+\begin{document}
+  
+\begin{letter}{
+    \LARGE{Scott Bakula} \\
+    Jay D. Schwartz \& Associates \\
+    6767 Forest Lawn Dr \\
+    Suite 211 \\
+    Los Angeles, CA 90068 \\
+    USA
+}
+    
+\setkomavar{subject}{}
+    
+\opening{Dear Scott Bakula,}
+
+We are the Oxford Star Trek Society, and we've been enjoying Trek as a
+society of university students since 1990. We watch Trek together
+every Monday and have a variety of other social events too across each
+term. As you might imagine, we are big fans of yours. As such we would
+like to offer you honorary membership and, if you accept, would be
+very grateful if you could sign and return the enclosed photo for our
+membership book (we've enclosed a pre-paid and addressed envelope).
+
+Also on behalf of the society, I am inviting you to come visit us if
+you are ever in Oxford and it is convenient for you. We can be
+contacted at:
+
+{\large oxfordstartrek@gmail.com}
+
+We hope to hear from you soon.
+
+\closing{Live Long and Prosper,}
+  
+\end{letter}
+
+\end{document}
